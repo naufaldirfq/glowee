@@ -9,23 +9,35 @@
 /* Begin PBXBuildFile section */
 		B852668A2615DCF300AF3508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85266892615DCF300AF3508 /* AppDelegate.swift */; };
 		B852668C2615DCF300AF3508 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852668B2615DCF300AF3508 /* SceneDelegate.swift */; };
-		B852668E2615DCF300AF3508 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852668D2615DCF300AF3508 /* ViewController.swift */; };
 		B85266912615DCF300AF3508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B852668F2615DCF300AF3508 /* Main.storyboard */; };
 		B85266942615DCF300AF3508 /* Glowee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B85266922615DCF300AF3508 /* Glowee.xcdatamodeld */; };
 		B85266962615DCF300AF3508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B85266952615DCF300AF3508 /* Assets.xcassets */; };
 		B85266992615DCF300AF3508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85266972615DCF300AF3508 /* LaunchScreen.storyboard */; };
+		B8FD5C11261C265300B29599 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C10261C265300B29599 /* OnboardingViewController.swift */; };
+		B8FD5C14261C271000B29599 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C13261C271000B29599 /* ReminderViewController.swift */; };
+		B8FD5C1B261C273900B29599 /* Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C1A261C273900B29599 /* Reminder.storyboard */; };
+		B8FD5C22261C28D400B29599 /* SuggestionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C21261C28D400B29599 /* SuggestionsViewController.swift */; };
+		B8FD5C25261C28E200B29599 /* Suggestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C24261C28E200B29599 /* Suggestions.storyboard */; };
+		B8FD5C28261C28FF00B29599 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C27261C28FF00B29599 /* Preferences.storyboard */; };
+		B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B85266862615DCF300AF3508 /* Glowee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glowee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85266892615DCF300AF3508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B852668B2615DCF300AF3508 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B852668D2615DCF300AF3508 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B85266902615DCF300AF3508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B85266932615DCF300AF3508 /* Glowee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Glowee.xcdatamodel; sourceTree = "<group>"; };
 		B85266952615DCF300AF3508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B85266982615DCF300AF3508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B852669A2615DCF300AF3508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8FD5C10261C265300B29599 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		B8FD5C13261C271000B29599 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
+		B8FD5C1A261C273900B29599 /* Reminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
+		B8FD5C21261C28D400B29599 /* SuggestionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuggestionsViewController.swift; sourceTree = "<group>"; };
+		B8FD5C24261C28E200B29599 /* Suggestions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suggestions.storyboard; sourceTree = "<group>"; };
+		B8FD5C27261C28FF00B29599 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +70,62 @@
 		B85266882615DCF300AF3508 /* Glowee */ = {
 			isa = PBXGroup;
 			children = (
+				B8FD5C06261C238200B29599 /* Pages */,
 				B85266892615DCF300AF3508 /* AppDelegate.swift */,
 				B852668B2615DCF300AF3508 /* SceneDelegate.swift */,
-				B852668D2615DCF300AF3508 /* ViewController.swift */,
-				B852668F2615DCF300AF3508 /* Main.storyboard */,
 				B85266952615DCF300AF3508 /* Assets.xcassets */,
 				B85266972615DCF300AF3508 /* LaunchScreen.storyboard */,
 				B852669A2615DCF300AF3508 /* Info.plist */,
 				B85266922615DCF300AF3508 /* Glowee.xcdatamodeld */,
 			);
 			path = Glowee;
+			sourceTree = "<group>";
+		};
+		B8FD5C06261C238200B29599 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				B8FD5C0B261C248B00B29599 /* Onboarding */,
+				B8FD5C0A261C248200B29599 /* Reminder */,
+				B8FD5C09261C243200B29599 /* Suggestions */,
+				B8FD5C08261C241100B29599 /* Preferences */,
+			);
+			path = Pages;
+			sourceTree = "<group>";
+		};
+		B8FD5C08261C241100B29599 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				B8FD5C27261C28FF00B29599 /* Preferences.storyboard */,
+				B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */,
+			);
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		B8FD5C09261C243200B29599 /* Suggestions */ = {
+			isa = PBXGroup;
+			children = (
+				B8FD5C21261C28D400B29599 /* SuggestionsViewController.swift */,
+				B8FD5C24261C28E200B29599 /* Suggestions.storyboard */,
+			);
+			path = Suggestions;
+			sourceTree = "<group>";
+		};
+		B8FD5C0A261C248200B29599 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				B8FD5C13261C271000B29599 /* ReminderViewController.swift */,
+				B8FD5C1A261C273900B29599 /* Reminder.storyboard */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
+		B8FD5C0B261C248B00B29599 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				B852668F2615DCF300AF3508 /* Main.storyboard */,
+				B8FD5C10261C265300B29599 /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +185,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8FD5C25261C28E200B29599 /* Suggestions.storyboard in Resources */,
+				B8FD5C1B261C273900B29599 /* Reminder.storyboard in Resources */,
 				B85266992615DCF300AF3508 /* LaunchScreen.storyboard in Resources */,
+				B8FD5C28261C28FF00B29599 /* Preferences.storyboard in Resources */,
 				B85266962615DCF300AF3508 /* Assets.xcassets in Resources */,
 				B85266912615DCF300AF3508 /* Main.storyboard in Resources */,
 			);
@@ -140,10 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B852668E2615DCF300AF3508 /* ViewController.swift in Sources */,
 				B852668A2615DCF300AF3508 /* AppDelegate.swift in Sources */,
 				B85266942615DCF300AF3508 /* Glowee.xcdatamodeld in Sources */,
+				B8FD5C22261C28D400B29599 /* SuggestionsViewController.swift in Sources */,
+				B8FD5C14261C271000B29599 /* ReminderViewController.swift in Sources */,
 				B852668C2615DCF300AF3508 /* SceneDelegate.swift in Sources */,
+				B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */,
+				B8FD5C11261C265300B29599 /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
