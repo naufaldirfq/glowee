@@ -12,10 +12,15 @@ class SuggestionsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        initView()
         // Do any additional setup after loading the view.
     }
     
-
+    func initView() {
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
