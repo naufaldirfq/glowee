@@ -7,23 +7,34 @@
 
 import UIKit
 
-class SuggestionsViewController: UIViewController {
+class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
+    
+//    @IBOutlet weak var suggestionTableView: UITableView!
+    @IBOutlet weak var ingredients1Button: UIButton!
+    @IBOutlet weak var ingredients2Button: UIButton!
+    @IBOutlet weak var ingredients3Button: UIButton!
+    @IBOutlet weak var ingredients4Button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         initView()
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
+    func initView() {
+            
     }
     
-    func initView() {
-        
-    }
+    
     
     
     /*
