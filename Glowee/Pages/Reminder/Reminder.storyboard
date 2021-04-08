@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kzi-WK-1IA">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+>>>>>>> reminder_page
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,6 +13,7 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+<<<<<<< HEAD
         <scene sceneID="FAe-hr-R7V">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="kzi-WK-1IA" sceneMemberID="viewController">
@@ -45,6 +50,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gjE-hA-7ET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="129" y="-25"/>
+=======
+        <scene sceneID="gOx-0W-bgK">
+            <objects>
+                <viewController id="i3s-gp-Hfm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y2R-KW-pw6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tPO-MJ-afI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rym-2y-Rcu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="171" y="179"/>
+>>>>>>> reminder_page
         </scene>
     </scenes>
     <resources>
