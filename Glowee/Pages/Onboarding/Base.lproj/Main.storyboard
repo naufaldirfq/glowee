@@ -106,6 +106,16 @@ to know your skin better</string>
             </objects>
             <point key="canvasLocation" x="789.85507246376812" y="68.973214285714278"/>
         </scene>
+        <!--Suggestions-->
+        <scene sceneID="TZU-zB-Pyd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Suggestions" id="dyG-S0-yen" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Oht-Xe-SIb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3y1-3F-eux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="69"/>
+        </scene>
     </scenes>
     <resources>
         <image name="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" width="261" height="562"/>

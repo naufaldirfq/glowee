@@ -21,6 +21,9 @@
 		B85266942615DCF300AF3508 /* Glowee.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B85266922615DCF300AF3508 /* Glowee.xcdatamodeld */; };
 		B85266962615DCF300AF3508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B85266952615DCF300AF3508 /* Assets.xcassets */; };
 		B85266992615DCF300AF3508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B85266972615DCF300AF3508 /* LaunchScreen.storyboard */; };
+		B85ED3A1261F16E5000742CB /* RecommendationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85ED3A0261F16E5000742CB /* RecommendationTableViewCell.swift */; };
+		B85ED3A4261F1BF6000742CB /* ProductsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85ED3A3261F1BF6000742CB /* ProductsCollectionViewCell.swift */; };
+		B85ED3A7261F5E4F000742CB /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85ED3A6261F5E4F000742CB /* Model.swift */; };
 		B8FD5C11261C265300B29599 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C10261C265300B29599 /* OnboardingViewController.swift */; };
 		B8FD5C14261C271000B29599 /* ReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C13261C271000B29599 /* ReminderViewController.swift */; };
 		B8FD5C1B261C273900B29599 /* Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C1A261C273900B29599 /* Reminder.storyboard */; };
@@ -47,6 +50,9 @@
 		B85266952615DCF300AF3508 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B85266982615DCF300AF3508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B852669A2615DCF300AF3508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B85ED3A0261F16E5000742CB /* RecommendationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendationTableViewCell.swift; sourceTree = "<group>"; };
+		B85ED3A3261F1BF6000742CB /* ProductsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsCollectionViewCell.swift; sourceTree = "<group>"; };
+		B85ED3A6261F5E4F000742CB /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		B8FD5C10261C265300B29599 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		B8FD5C13261C271000B29599 /* ReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderViewController.swift; sourceTree = "<group>"; };
 		B8FD5C1A261C273900B29599 /* Reminder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
@@ -129,6 +135,9 @@
 			children = (
 				B8FD5C21261C28D400B29599 /* SuggestionsViewController.swift */,
 				B8FD5C24261C28E200B29599 /* Suggestions.storyboard */,
+				B85ED3A0261F16E5000742CB /* RecommendationTableViewCell.swift */,
+				B85ED3A3261F1BF6000742CB /* ProductsCollectionViewCell.swift */,
+				B85ED3A6261F5E4F000742CB /* Model.swift */,
 				8E71D8D3262035FA00413A73 /* IngredientsPage.swift */,
 				8E71D8D0261F127F00413A73 /* IngredientsPage.storyboard */,
 				8E71D8DD2620416900413A73 /* IngredientsPageRevisi.swift */,
@@ -245,8 +254,11 @@
 				8E71D8DE2620416900413A73 /* IngredientsPageRevisi.swift in Sources */,
 				8E71D8E42620506000413A73 /* WhyPageRevisi.swift in Sources */,
 				B8FD5C22261C28D400B29599 /* SuggestionsViewController.swift in Sources */,
+				B85ED3A4261F1BF6000742CB /* ProductsCollectionViewCell.swift in Sources */,
 				8E71D8D72620360E00413A73 /* WhyPage.swift in Sources */,
 				B8FD5C14261C271000B29599 /* ReminderViewController.swift in Sources */,
+				B85ED3A7261F5E4F000742CB /* Model.swift in Sources */,
+				B85ED3A1261F16E5000742CB /* RecommendationTableViewCell.swift in Sources */,
 				B852668C2615DCF300AF3508 /* SceneDelegate.swift in Sources */,
 				B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */,
 				B8FD5C11261C265300B29599 /* OnboardingViewController.swift in Sources */,
