@@ -7,23 +7,30 @@
 
 import UIKit
 
-class ReminderViewController: UIViewController {
-
+class ReminderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableview: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.tableview.register(ReminderCollectionViewCell.nib(), forCellReuseIdentifier: ReminderCollectionViewCell.identifier)
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
+    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "ReminderTableViewCell")
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderTableViewCell", for: indexPath)
+        
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
 }
