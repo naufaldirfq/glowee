@@ -7,38 +7,30 @@
 
 import UIKit
 
-class ReminderViewController: UIViewController {
+class ReminderViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    @IBOutlet weak var tableview: UITableView!
     
-    @IBOutlet var tableView: UITableView!
-    let names = ["Bambang","Sudirman", "Joko"]
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableview.register(ReminderCollectionViewCell.nib(), forCellReuseIdentifier: ReminderCollectionViewCell.identifier)
+        self.tableview.delegate = self
+        self.tableview.dataSource = self
+    
     }
- 
-
-}
-
-extension ReminderViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You Tapped Me")
-    }
-}
-
-extension ReminderViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return names.count
+        return 5
     }
- 
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "ReminderTableViewCell")
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderTableViewCell", for: indexPath)
         
-        cell.textLabel?.text = "Hello Pemirsa"
         
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
 }

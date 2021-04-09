@@ -22,6 +22,9 @@
 		B8FD5C25261C28E200B29599 /* Suggestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C24261C28E200B29599 /* Suggestions.storyboard */; };
 		B8FD5C28261C28FF00B29599 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C27261C28FF00B29599 /* Preferences.storyboard */; };
 		B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */; };
+		C7143ED3261F0EC0009FDB3C /* Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7143ED2261F0EC0009FDB3C /* Reminder.storyboard */; };
+		C78863F4262032DA00946475 /* ReminderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78863F3262032DA00946475 /* ReminderTableViewCell.swift */; };
+		C78863F92620577B00946475 /* ReminderCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C78863F82620577B00946475 /* ReminderCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		B8FD5C24261C28E200B29599 /* Suggestions.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Suggestions.storyboard; sourceTree = "<group>"; };
 		B8FD5C27261C28FF00B29599 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
+		C7143ED2261F0EC0009FDB3C /* Reminder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
+		C78863F3262032DA00946475 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
+		C78863F82620577B00946475 /* ReminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,8 @@
 		B8FD5C0A261C248200B29599 /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				C78863F12620329E00946475 /* ReminderTableCell */,
+				C7143ED2261F0EC0009FDB3C /* Reminder.storyboard */,
 				B8FD5C13261C271000B29599 /* ReminderViewController.swift */,
 				B8FD5C1A261C273900B29599 /* Reminder.storyboard */,
 				8E550480261C5426002D8E43 /* Modality-Reminder.storyboard */,
@@ -132,6 +140,15 @@
 				B8FD5C10261C265300B29599 /* OnboardingViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		C78863F12620329E00946475 /* ReminderTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				C78863F3262032DA00946475 /* ReminderTableViewCell.swift */,
+				C78863F82620577B00946475 /* ReminderCollectionViewCell.swift */,
+			);
+			path = ReminderTableCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7143ED3261F0EC0009FDB3C /* Reminder.storyboard in Resources */,
 				B8FD5C25261C28E200B29599 /* Suggestions.storyboard in Resources */,
 				B8FD5C1B261C273900B29599 /* Reminder.storyboard in Resources */,
 				B85266992615DCF300AF3508 /* LaunchScreen.storyboard in Resources */,
@@ -212,6 +230,8 @@
 				B85266942615DCF300AF3508 /* Glowee.xcdatamodeld in Sources */,
 				B8FD5C22261C28D400B29599 /* SuggestionsViewController.swift in Sources */,
 				B8FD5C14261C271000B29599 /* ReminderViewController.swift in Sources */,
+				C78863F92620577B00946475 /* ReminderCollectionViewCell.swift in Sources */,
+				C78863F4262032DA00946475 /* ReminderTableViewCell.swift in Sources */,
 				B852668C2615DCF300AF3508 /* SceneDelegate.swift in Sources */,
 				B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */,
 				B8FD5C11261C265300B29599 /* OnboardingViewController.swift in Sources */,
