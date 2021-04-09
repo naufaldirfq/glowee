@@ -11,9 +11,9 @@
         <!--Onboarding View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-m1-CI6">
@@ -34,7 +34,7 @@ already registered in BPOM</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3Fr-wR-hRd">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Fr-wR-hRd">
                                 <rect key="frame" x="147" y="560" width="123" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
@@ -53,16 +53,16 @@ already registered in BPOM</string>
             </objects>
             <point key="canvasLocation" x="-72.463768115942031" y="68.973214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--On Boarding2 View Controller-->
         <scene sceneID="hMJ-eq-gMe">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="cXf-n0-8xW" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="cXf-n0-8xW" customClass="OnBoarding2ViewController" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4DT-4l-tl2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-cj-Fer">
-                                <rect key="frame" x="0.0" y="-27" width="426" height="948"/>
+                                <rect key="frame" x="-16" y="0.0" width="447" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gloweeLogohorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="hQ7-aj-hRz">
@@ -83,7 +83,7 @@ to know your skin better</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="6co-rh-I9G">
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="6co-rh-I9G">
                                 <rect key="frame" x="146" y="561" width="123" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </pageControl>
@@ -99,7 +99,9 @@ to know your skin better</string>
                     </view>
                     <navigationItem key="navigationItem" id="1gH-Z3-S3g"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="backScreen" id="YJ9-Fi-awj"/>
+                        <outlet property="btnLetsBegin" destination="lA0-aq-HBe" id="Aei-es-kEo"/>
+                        <outlet property="swipeScreen" destination="4DT-4l-tl2" id="13l-x6-KKa"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="OnBoarding1" id="YJ9-Fi-awj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVf-VV-iDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
