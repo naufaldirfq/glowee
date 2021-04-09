@@ -9,10 +9,10 @@ import UIKit
 
 class ReminderCollectionViewCell: UICollectionViewCell {
     
-    static let identifier = "ReminderCollectionViewCell"
+    static let identifier = "reminderCollectionViewCell"
     
     static func nib() -> UINib {
-        return UINib(nibName: "ReminderCollectionViewCell", bundle: nil)
+        return UINib(nibName: "reminderCollectionViewCell", bundle: nil)
     }
     
     override class func awakeFromNib() {

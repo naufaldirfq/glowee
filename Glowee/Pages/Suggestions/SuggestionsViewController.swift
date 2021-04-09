@@ -26,7 +26,6 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func initTableView() {
-        self.suggestionTableView.register(ProductsCollectionViewCell.nib(), forCellReuseIdentifier: ProductsCollectionViewCell.identifier)
         self.suggestionTableView.delegate = self
         self.suggestionTableView.dataSource = self
     }
@@ -45,7 +44,7 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "recommendationTableViewCell", for: indexPath) as? RecommendationTableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: RecommendationTableViewCell.identifier, for: indexPath) as? RecommendationTableViewCell {
             cell.configure(with: productModel)
             return cell
         }

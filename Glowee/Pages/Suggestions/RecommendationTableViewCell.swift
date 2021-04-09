@@ -15,9 +15,11 @@ class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     var products = [String] ()
     var models = [Model]()
     
+    static let identifier = "recommendationTableViewCell"
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.productCollectionView.register(ProductsCollectionViewCell.nib(), forCellWithReuseIdentifier: ProductsCollectionViewCell.identifier)
         self.productCollectionView.delegate = self
         self.productCollectionView.dataSource = self
         
@@ -41,11 +43,10 @@ class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell: ProductsCollectionViewCell = productCollectionView.dequeueReusableCell(withReuseIdentifier: "productCollectionViewCell", for: indexPath) as? ProductsCollectionViewCell {
+        if let cell: ProductsCollectionViewCell = productCollectionView.dequeueReusableCell(withReuseIdentifier: ProductsCollectionViewCell.identifier, for: indexPath) as? ProductsCollectionViewCell {
             cell.configure(with: models[indexPath.row])
             return cell
         }
-        print("gak masuk if collection")
         return UICollectionViewCell()
         
     }

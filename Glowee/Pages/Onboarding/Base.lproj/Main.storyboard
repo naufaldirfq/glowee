@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-m1-CI6">
@@ -58,7 +58,7 @@ already registered in BPOM</string>
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="cXf-n0-8xW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4DT-4l-tl2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-cj-Fer">
@@ -92,6 +92,9 @@ to know your skin better</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Lets Begin"/>
+                                <connections>
+                                    <segue destination="HuU-NC-jV5" kind="show" id="eXG-aq-opA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Sc-hm-AuV"/>
@@ -126,12 +129,22 @@ to know your skin better</string>
             </objects>
             <point key="canvasLocation" x="438" y="190"/>
         </scene>
+        <!--Preferences-->
+        <scene sceneID="cwm-iG-DjV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Preferences" id="HuU-NC-jV5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UKi-W0-lyq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5e-4L-vWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="292"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" width="261" height="562"/>
-        <image name="GloweeLogowhite" width="296" height="298"/>
-        <image name="gloweeLogohorizontal" width="747.5" height="234.5"/>
-        <image name="skincareprod2.1" width="149" height="124"/>
+        <image name="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" width="261.33334350585938" height="562"/>
+        <image name="GloweeLogowhite" width="296" height="298.33334350585938"/>
+        <image name="gloweeLogohorizontal" width="747.66668701171875" height="234.66667175292969"/>
+        <image name="skincareprod2.1" width="149.33332824707031" height="124.33333587646484"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
