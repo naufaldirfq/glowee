@@ -9,11 +9,20 @@ import UIKit
 
 class OnboardingViewController: UIViewController {
 
+    @IBOutlet var swipeScreen: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let leftswipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(leftSwipeByUser(_ :)))
+        leftswipeGesture.direction = .left
+        self.view.addGestureRecognizer(leftswipeGesture)
     }
+    
+    @objc func leftSwipeByUser (_ gesture:UISwipeGestureRecognizer){
+            performSegue(withIdentifier: "OnBoarding2", sender: self.swipeScreen)
+        }
+    
+}
     
 
     /*
@@ -23,7 +32,4 @@ class OnboardingViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-    }
     */
-
-}
