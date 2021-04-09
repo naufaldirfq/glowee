@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DABB245261DC8100093F6F5 /* skinTypeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DABB244261DC8100093F6F5 /* skinTypeTableViewCell.swift */; };
+		9DABB249261E02040093F6F5 /* SkinTypeDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DABB248261E02040093F6F5 /* SkinTypeDetailsTableViewCell.swift */; };
+		9DABB24C261E13DA0093F6F5 /* SkinTypeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DABB24B261E13DA0093F6F5 /* SkinTypeDetailsTableViewController.swift */; };
+		9DABB24F261ED08D0093F6F5 /* SkinIssueDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DABB24E261ED08D0093F6F5 /* SkinIssueDetailsTableViewCell.swift */; };
+		9DABB252261ED3C20093F6F5 /* SkinIssueDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DABB251261ED3C20093F6F5 /* SkinIssueDetailsTableViewController.swift */; };
+		9DABB255261F65770093F6F5 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DABB254261F65770093F6F5 /* RangeSlider.swift */; };
+		9DABB25A261F78790093F6F5 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DABB259261F78790093F6F5 /* RangeSliderTrackLayer.swift */; };
 		B852668A2615DCF300AF3508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B85266892615DCF300AF3508 /* AppDelegate.swift */; };
 		B852668C2615DCF300AF3508 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B852668B2615DCF300AF3508 /* SceneDelegate.swift */; };
 		B85266912615DCF300AF3508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B852668F2615DCF300AF3508 /* Main.storyboard */; };
@@ -23,6 +30,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9DABB244261DC8100093F6F5 /* skinTypeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = skinTypeTableViewCell.swift; sourceTree = "<group>"; };
+		9DABB248261E02040093F6F5 /* SkinTypeDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTypeDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		9DABB24B261E13DA0093F6F5 /* SkinTypeDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinTypeDetailsTableViewController.swift; sourceTree = "<group>"; };
+		9DABB24E261ED08D0093F6F5 /* SkinIssueDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinIssueDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		9DABB251261ED3C20093F6F5 /* SkinIssueDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkinIssueDetailsTableViewController.swift; sourceTree = "<group>"; };
+		9DABB254261F65770093F6F5 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		9DABB259261F78790093F6F5 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		B85266862615DCF300AF3508 /* Glowee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Glowee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B85266892615DCF300AF3508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B852668B2615DCF300AF3508 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +111,13 @@
 			children = (
 				B8FD5C27261C28FF00B29599 /* Preferences.storyboard */,
 				B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */,
+				9DABB244261DC8100093F6F5 /* skinTypeTableViewCell.swift */,
+				9DABB254261F65770093F6F5 /* RangeSlider.swift */,
+				9DABB259261F78790093F6F5 /* RangeSliderTrackLayer.swift */,
+				9DABB248261E02040093F6F5 /* SkinTypeDetailsTableViewCell.swift */,
+				9DABB24B261E13DA0093F6F5 /* SkinTypeDetailsTableViewController.swift */,
+				9DABB24E261ED08D0093F6F5 /* SkinIssueDetailsTableViewCell.swift */,
+				9DABB251261ED3C20093F6F5 /* SkinIssueDetailsTableViewController.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -201,9 +222,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DABB245261DC8100093F6F5 /* skinTypeTableViewCell.swift in Sources */,
+				9DABB24C261E13DA0093F6F5 /* SkinTypeDetailsTableViewController.swift in Sources */,
+				9DABB25A261F78790093F6F5 /* RangeSliderTrackLayer.swift in Sources */,
 				B852668A2615DCF300AF3508 /* AppDelegate.swift in Sources */,
+				9DABB252261ED3C20093F6F5 /* SkinIssueDetailsTableViewController.swift in Sources */,
 				B85266942615DCF300AF3508 /* Glowee.xcdatamodeld in Sources */,
+				9DABB255261F65770093F6F5 /* RangeSlider.swift in Sources */,
+				9DABB249261E02040093F6F5 /* SkinTypeDetailsTableViewCell.swift in Sources */,
 				B8FD5C22261C28D400B29599 /* SuggestionsViewController.swift in Sources */,
+				9DABB24F261ED08D0093F6F5 /* SkinIssueDetailsTableViewCell.swift in Sources */,
 				B8FD5C14261C271000B29599 /* ReminderViewController.swift in Sources */,
 				B852668C2615DCF300AF3508 /* SceneDelegate.swift in Sources */,
 				B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */,
