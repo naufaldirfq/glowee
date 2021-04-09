@@ -113,6 +113,13 @@
 			children = (
 				B8FD5C27261C28FF00B29599 /* Preferences.storyboard */,
 				B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */,
+				9DABB244261DC8100093F6F5 /* skinTypeTableViewCell.swift */,
+				9DABB254261F65770093F6F5 /* RangeSlider.swift */,
+				9DABB259261F78790093F6F5 /* RangeSliderTrackLayer.swift */,
+				9DABB248261E02040093F6F5 /* SkinTypeDetailsTableViewCell.swift */,
+				9DABB24B261E13DA0093F6F5 /* SkinTypeDetailsTableViewController.swift */,
+				9DABB24E261ED08D0093F6F5 /* SkinIssueDetailsTableViewCell.swift */,
+				9DABB251261ED3C20093F6F5 /* SkinIssueDetailsTableViewController.swift */,
 			);
 			path = Preferences;
 			sourceTree = "<group>";
@@ -229,6 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DABB245261DC8100093F6F5 /* skinTypeTableViewCell.swift in Sources */,
+				9DABB24C261E13DA0093F6F5 /* SkinTypeDetailsTableViewController.swift in Sources */,
+				9DABB25A261F78790093F6F5 /* RangeSliderTrackLayer.swift in Sources */,
 				B852668A2615DCF300AF3508 /* AppDelegate.swift in Sources */,
 				8E71D8D4262035FA00413A73 /* IngredientsPage.swift in Sources */,
 				B85266942615DCF300AF3508 /* Glowee.xcdatamodeld in Sources */,
