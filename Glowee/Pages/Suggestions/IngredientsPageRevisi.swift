@@ -1,31 +1,25 @@
 //
-//  SuggestionsViewController.swift
+//  IngredientsPageRevisi.swift
 //  Glowee
 //
-//  Created by Naufaldi Athallah Rifqi on 06/04/21.
+//  Created by Felicia Stevanie on 09/04/21.
 //
 
 import UIKit
 
-class SuggestionsViewController: UIViewController {
+class IngredientsPageRevisi: UIViewController {
+
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tabBar: UITabBar!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        initView()
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-    }
-    
-    func initView() {
-        
-    }
-    
-    
+
     /*
     // MARK: - Navigation
 
