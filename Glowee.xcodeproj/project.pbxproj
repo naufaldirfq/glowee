@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E5F7483262067DB00368837 /* OnBoarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E5F7482262067DB00368837 /* OnBoarding2ViewController.swift */; };
 		8E71D8CE261F126F00413A73 /* WhyPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71D8CD261F126F00413A73 /* WhyPage.storyboard */; };
 		8E71D8D1261F127F00413A73 /* IngredientsPage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E71D8D0261F127F00413A73 /* IngredientsPage.storyboard */; };
 		8E71D8D4262035FA00413A73 /* IngredientsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E71D8D3262035FA00413A73 /* IngredientsPage.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8E5F7482262067DB00368837 /* OnBoarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoarding2ViewController.swift; sourceTree = "<group>"; };
 		8E71D8CD261F126F00413A73 /* WhyPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WhyPage.storyboard; sourceTree = "<group>"; };
 		8E71D8D0261F127F00413A73 /* IngredientsPage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IngredientsPage.storyboard; sourceTree = "<group>"; };
 		8E71D8D3262035FA00413A73 /* IngredientsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsPage.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				B852668F2615DCF300AF3508 /* Main.storyboard */,
 				B8FD5C10261C265300B29599 /* OnboardingViewController.swift */,
+				8E5F7482262067DB00368837 /* OnBoarding2ViewController.swift */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				B85ED3A1261F16E5000742CB /* RecommendationTableViewCell.swift in Sources */,
 				B852668C2615DCF300AF3508 /* SceneDelegate.swift in Sources */,
 				B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */,
+				8E5F7483262067DB00368837 /* OnBoarding2ViewController.swift in Sources */,
 				B8FD5C11261C265300B29599 /* OnboardingViewController.swift in Sources */,
 				8E550484261C59D9002D8E43 /* ModalityReminderViewController.swift in Sources */,
 			);
