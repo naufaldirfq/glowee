@@ -10,7 +10,7 @@ import UIKit
 class IngredientsPageRevisi: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-   
+    @IBOutlet weak var tabBar: UITabBar!
     
     
     override func viewDidLoad() {

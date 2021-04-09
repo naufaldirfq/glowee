@@ -9,6 +9,10 @@ import UIKit
 
 class WhyPageRevisi: UIViewController {
 
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tabBar: UITabBar!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

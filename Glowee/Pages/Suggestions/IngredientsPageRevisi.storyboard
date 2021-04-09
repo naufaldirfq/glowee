@@ -148,6 +148,15 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jl3-h7-hwx">
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem systemItem="favorites" id="RAU-mi-ohX"/>
+                                    <tabBarItem systemItem="more" id="i6H-P3-wkv"/>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kR7-Tp-5XW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,6 +168,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="tabBar" destination="Jl3-h7-hwx" id="nHN-OW-R0b"/>
                         <outlet property="tableView" destination="qia-IW-zb7" id="yzq-N5-T19"/>
                     </connections>
                 </viewController>
