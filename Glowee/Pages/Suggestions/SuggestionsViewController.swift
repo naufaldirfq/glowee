@@ -31,12 +31,12 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func initModels() {
-        productModel.append(Model(productName: "Garnier", image: "cleanser_1"))
-        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2"))
-        productModel.append(Model(productName: "Senka", image: "cleanser_3"))
-        productModel.append(Model(productName: "Garnier", image: "cleanser_1"))
-        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2"))
-        productModel.append(Model(productName: "Senka", image: "cleanser_3"))
+        productModel.append(Model(productName: "Garnier", image: "cleanser_1", brandName: " "))
+        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2", brandName: " "))
+        productModel.append(Model(productName: "Senka", image: "cleanser_3", brandName: " "))
+        productModel.append(Model(productName: "Garnier", image: "cleanser_1", brandName: " "))
+        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2", brandName: " "))
+        productModel.append(Model(productName: "Senka", image: "cleanser_3", brandName: " "))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
