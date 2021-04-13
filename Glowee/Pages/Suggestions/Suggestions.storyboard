@@ -57,6 +57,9 @@
                                 <rect key="frame" x="251" y="275" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="XGC-c4-cyZ" kind="show" id="bFL-YF-Qew"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fKz-G9-pzB">
                                 <rect key="frame" x="251" y="313" width="46" height="30"/>
@@ -125,6 +128,7 @@
                                                             <connections>
                                                                 <outlet property="productImage" destination="uau-fI-dQw" id="BBr-lc-Jbq"/>
                                                                 <outlet property="productLabel" destination="hnJ-Dj-SoB" id="8eO-zD-vAe"/>
+                                                                <segue destination="HwT-eK-I8v" kind="show" id="Lce-2Q-id2"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -160,6 +164,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjE-qy-Qgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2653.8461538461538" y="14.928909952606634"/>
+        </scene>
+        <!--WhyPageRevisi-->
+        <scene sceneID="CeL-nM-hwK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WhyPageRevisi" id="XGC-c4-cyZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Xut-71-e6t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GBG-pS-mR0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1968" y="-145"/>
+        </scene>
+        <!--ProductDetail-->
+        <scene sceneID="bgV-Dg-bT4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductDetail" id="HwT-eK-I8v" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="D03-oL-5iy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dj-aw-iY2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1852" y="11"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zAW-vE-4ke">
