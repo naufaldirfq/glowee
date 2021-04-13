@@ -125,6 +125,7 @@
                                                             <connections>
                                                                 <outlet property="productImage" destination="uau-fI-dQw" id="BBr-lc-Jbq"/>
                                                                 <outlet property="productLabel" destination="hnJ-Dj-SoB" id="8eO-zD-vAe"/>
+                                                                <segue destination="c9I-U4-Euq" kind="show" id="fZ2-7n-0Ng"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
@@ -160,6 +161,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjE-qy-Qgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2653.8461538461538" y="14.928909952606634"/>
+        </scene>
+        <!--ProductDetail-->
+        <scene sceneID="ViV-2c-ICP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ProductDetail" id="c9I-U4-Euq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ATd-G0-jIM"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l9l-Jf-AGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1934" y="-28"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zAW-vE-4ke">

@@ -55,10 +55,12 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
         recommendations.count
     }
     
+    
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return recommendations[section]
     }
     
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 120

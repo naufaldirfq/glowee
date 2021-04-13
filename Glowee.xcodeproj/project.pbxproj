@@ -40,6 +40,11 @@
 		B8FD5C25261C28E200B29599 /* Suggestions.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C24261C28E200B29599 /* Suggestions.storyboard */; };
 		B8FD5C28261C28FF00B29599 /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8FD5C27261C28FF00B29599 /* Preferences.storyboard */; };
 		B8FD5C2B261C290D00B29599 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */; };
+		C7771495262405740005A934 /* ProductDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7771494262405740005A934 /* ProductDetail.storyboard */; };
+		C7771499262405A90005A934 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7771497262405A90005A934 /* ProductDetailViewController.swift */; };
+		C7E8397D2625C38100EA7CB5 /* ProductDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E8397C2625C38100EA7CB5 /* ProductDetailTableViewCell.swift */; };
+		C7E839802625EE4300EA7CB5 /* ModalityReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7E8397F2625EE4300EA7CB5 /* ModalityReminderViewController.swift */; };
+		C7E839832625EE4C00EA7CB5 /* Modality-Reminder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7E839822625EE4C00EA7CB5 /* Modality-Reminder.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,8 +83,13 @@
 		B8FD5C27261C28FF00B29599 /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		B8FD5C2A261C290D00B29599 /* PreferencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		C7143ED2261F0EC0009FDB3C /* Reminder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reminder.storyboard; sourceTree = "<group>"; };
+		C7771494262405740005A934 /* ProductDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductDetail.storyboard; sourceTree = "<group>"; };
+		C7771497262405A90005A934 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		C78863F3262032DA00946475 /* ReminderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderTableViewCell.swift; sourceTree = "<group>"; };
 		C78863F82620577B00946475 /* ReminderCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7E8397C2625C38100EA7CB5 /* ProductDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailTableViewCell.swift; sourceTree = "<group>"; };
+		C7E8397F2625EE4300EA7CB5 /* ModalityReminderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalityReminderViewController.swift; sourceTree = "<group>"; };
+		C7E839822625EE4C00EA7CB5 /* Modality-Reminder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Modality-Reminder.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +176,9 @@
 				8E71D8E32620506000413A73 /* WhyPageRevisi.swift */,
 				8E71D8E02620505100413A73 /* WhyPageRevisi.storyboard */,
 				B87362E526206E4F009B01FD /* ProductsCollectionViewCell.swift */,
+				C7771494262405740005A934 /* ProductDetail.storyboard */,
+				C7771497262405A90005A934 /* ProductDetailViewController.swift */,
+				C7E8397C2625C38100EA7CB5 /* ProductDetailTableViewCell.swift */,
 			);
 			path = Suggestions;
 			sourceTree = "<group>";
@@ -173,6 +186,8 @@
 		B8FD5C0A261C248200B29599 /* Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				C7E839822625EE4C00EA7CB5 /* Modality-Reminder.storyboard */,
+				C7E8397F2625EE4300EA7CB5 /* ModalityReminderViewController.swift */,
 				C78863F82620577B00946475 /* ReminderCollectionViewCell.swift */,
 				C78863F12620329E00946475 /* ReminderTableCell */,
 				C7143ED2261F0EC0009FDB3C /* Reminder.storyboard */,
@@ -263,8 +278,10 @@
 				8E71D8CE261F126F00413A73 /* WhyPage.storyboard in Resources */,
 				8E71D8D1261F127F00413A73 /* IngredientsPage.storyboard in Resources */,
 				B8FD5C1B261C273900B29599 /* Reminder.storyboard in Resources */,
+				C7771495262405740005A934 /* ProductDetail.storyboard in Resources */,
 				B85266992615DCF300AF3508 /* LaunchScreen.storyboard in Resources */,
 				B8FD5C28261C28FF00B29599 /* Preferences.storyboard in Resources */,
+				C7E839832625EE4C00EA7CB5 /* Modality-Reminder.storyboard in Resources */,
 				B85266962615DCF300AF3508 /* Assets.xcassets in Resources */,
 				B85266912615DCF300AF3508 /* Main.storyboard in Resources */,
 			);
@@ -279,11 +296,14 @@
 			files = (
 				B86A54F22620753500D05954 /* ReminderCollectionViewCell.swift in Sources */,
 				B87362E626206E4F009B01FD /* ProductsCollectionViewCell.swift in Sources */,
+				C7771499262405A90005A934 /* ProductDetailViewController.swift in Sources */,
 				B852668A2615DCF300AF3508 /* AppDelegate.swift in Sources */,
 				8E71D8D4262035FA00413A73 /* IngredientsPage.swift in Sources */,
+				C7E839802625EE4300EA7CB5 /* ModalityReminderViewController.swift in Sources */,
 				B85266942615DCF300AF3508 /* Glowee.xcdatamodeld in Sources */,
 				8E71D8DE2620416900413A73 /* IngredientsPageRevisi.swift in Sources */,
 				8E71D8E42620506000413A73 /* WhyPageRevisi.swift in Sources */,
+				C7E8397D2625C38100EA7CB5 /* ProductDetailTableViewCell.swift in Sources */,
 				B86A54EC262072BB00D05954 /* skinTypeTableViewCell.swift in Sources */,
 				B8FD5C22261C28D400B29599 /* SuggestionsViewController.swift in Sources */,
 				B86A54EB262072BB00D05954 /* SkinTypeDetailsTableViewController.swift in Sources */,

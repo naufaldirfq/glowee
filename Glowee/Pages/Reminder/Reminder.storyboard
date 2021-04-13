@@ -78,6 +78,10 @@
                                                                 </constraints>
                                                             </collectionViewCellContentView>
                                                             <size key="customSize" width="371" height="115"/>
+                                                            <connections>
+                                                                <outlet property="productBrand" destination="PNZ-2g-2Zb" id="2z6-4l-K5n"/>
+                                                                <outlet property="productImage" destination="GRR-0H-zn4" id="lK9-qD-qyC"/>
+                                                            </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                 </collectionView>
@@ -100,7 +104,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="collectionView" destination="vqM-BG-Agm" id="p4i-Pd-Bf5"/>
+                                            <outlet property="collectionview" destination="vqM-BG-Agm" id="J20-wd-Alf"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

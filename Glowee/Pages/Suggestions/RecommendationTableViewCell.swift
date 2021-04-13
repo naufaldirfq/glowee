@@ -42,6 +42,10 @@ class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         return models.count
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        return 
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell: ProductsCollectionViewCell = productCollectionView.dequeueReusableCell(withReuseIdentifier: ProductsCollectionViewCell.identifier, for: indexPath) as? ProductsCollectionViewCell {
             cell.configure(with: models[indexPath.row])
