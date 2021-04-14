@@ -9,8 +9,8 @@ import UIKit
 
 class skinTypeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var skinType: UILabel!
-    @IBOutlet weak var skinIssue: UILabel!
+    @IBOutlet weak public var skinType: UILabel!
+    @IBOutlet weak public var skinDetails: UILabel!
     
     
     override func awakeFromNib() {
