@@ -49,6 +49,9 @@
                                                     <color key="backgroundColor" name="AccentColor"/>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <segue destination="PID-fw-Oer" kind="show" id="fx0-nV-2z1"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Based on our researches, ingredients you need to heal your (main concern) skin:" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="100" translatesAutoresizingMaskIntoConstraints="NO" id="KWB-gl-0QZ">
                                                     <rect key="frame" x="20" y="77" width="330" height="43"/>
@@ -284,6 +287,16 @@
             </objects>
             <point key="canvasLocation" x="-2653.8461538461538" y="-630.56872037914684"/>
         </scene>
+        <!--IngredientsPageRevisi-->
+        <scene sceneID="K3y-Nc-9KJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IngredientsPageRevisi" id="PID-fw-Oer" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="CfB-9G-LUJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j6n-8f-cbo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1990" y="-61"/>
+        </scene>
         <!--WhyPageRevisi-->
         <scene sceneID="I5R-m3-9NY">
             <objects>
@@ -292,7 +305,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57q-2N-hmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2035" y="-84"/>
+            <point key="canvasLocation" x="-2022" y="15"/>
         </scene>
     </scenes>
     <resources>
