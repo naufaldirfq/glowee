@@ -11,8 +11,9 @@ class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     
 
     @IBOutlet weak var productCollectionView: UICollectionView!
+    @IBOutlet weak var recommendationLabel: UILabel!
+    @IBOutlet weak var yourRecommendationLabel: UILabel!
     
-    var products = [String] ()
     var models = [Model]()
     
     static let identifier = "recommendationTableViewCell"
@@ -22,9 +23,6 @@ class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         super.awakeFromNib()
         self.productCollectionView.delegate = self
         self.productCollectionView.dataSource = self
-        
-        products = ["garnier", "biore", "ponds"]
-        
     }
     
     func configure(with models: [Model]) {
@@ -50,10 +48,5 @@ class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
         return UICollectionViewCell()
         
     }
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-//        let size = CGSize(width: 50, height: 50)
-//        return size
-//    }
 
 }
