@@ -24,9 +24,8 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         self.tableview.register(UITableViewCell.self, forCellReuseIdentifier: "ReminderTableViewCell")
+        
     let cell = tableView.dequeueReusableCell(withIdentifier: "ReminderTableViewCell", for: indexPath)
-        
-        
         return cell
     }
     
