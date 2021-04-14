@@ -18,7 +18,7 @@ class skinCategory {
     
 }
 
-class PreferencesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, receiveData {
+class PreferencesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, receiveData, UITextFieldDelegate {
     
     // ini untuk bagian passing data segue --> passing datanya pake popview navigation di file SkinIssueDetailsTableViewController
     
@@ -54,11 +54,11 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         // bagian double headed slider
         rangeSlider.addTarget(self, action: #selector(rangeSliderValueChanged(_:)),
                               for: .valueChanged)
         
+        self.nameTextField.delegate = self
         
         //bagian untuk nambah array biar bisa ditulis
         
@@ -71,15 +71,12 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
         view.addSubview(rangeSlider)
     }
     
-    func hideKeyboardWhenTappedAround() {
-            let tapGesture = UITapGestureRecognizer(target: self,
-                             action: #selector(hideKeyboard))
-            view.addGestureRecognizer(tapGesture)
-        }
-
-        @objc func hideKeyboard() {
-            view.endEditing(true)
-        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            self.view.endEditing(true)
+            return false
+    }
+    
+    
     
     //dibawah ini untuk pertabelan duniawi
     
