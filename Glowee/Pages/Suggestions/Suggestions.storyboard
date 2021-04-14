@@ -47,6 +47,9 @@
                                 <rect key="frame" x="16" y="275" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="UOa-xJ-NVZ" kind="show" id="fVt-Hs-sT9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fck-Kc-YDH">
                                 <rect key="frame" x="16" y="313" width="46" height="30"/>
@@ -164,6 +167,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BjE-qy-Qgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2653.8461538461538" y="14.928909952606634"/>
+        </scene>
+        <!--IngredientsPageRevisi-->
+        <scene sceneID="sPq-7b-sBs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="IngredientsPageRevisi" id="UOa-xJ-NVZ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="SAS-X0-PaN"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LQx-Xw-p0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1968" y="-243"/>
         </scene>
         <!--WhyPageRevisi-->
         <scene sceneID="CeL-nM-hwK">

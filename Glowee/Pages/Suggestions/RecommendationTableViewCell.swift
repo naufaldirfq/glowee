@@ -10,7 +10,7 @@ import UIKit
 class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
     
 
-    @IBOutlet weak var productCollectionView: UICollectionView!
+    @IBOutlet var productCollectionView: UICollectionView!
     
     var products = [String] ()
     var models = [Model]()
