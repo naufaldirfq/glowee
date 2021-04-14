@@ -12,6 +12,10 @@ import UIKit
 // Issues = Class (liat huruf depan)
 // issue = konstan untuk manggil table view di function dibawah
 
+protocol receiveData: class {
+    func passDataBack(data: Issues)
+}
+
 class Issues {
     
     //MARK: Properties
@@ -20,41 +24,87 @@ class Issues {
     var skinIssueImage: UIImage?
     var skinIssueDetailsSelection: String
     var skinIssueCheckmark: UIImage?
+    var statusCheckmarkHidden: Bool?
+    var isIssue: Bool?
     
     init(skinIssueValueSelection: String, skinIssueImage: UIImage?, skinIssueDetailsSelection: String, skinIssueCheckmark: UIImage?) {
         self.skinIssueValueSelection = skinIssueValueSelection
         self.skinIssueImage = skinIssueImage
         self.skinIssueDetailsSelection = skinIssueDetailsSelection
         self.skinIssueCheckmark = skinIssueCheckmark
+        self.statusCheckmarkHidden = true
+        self.isIssue = false
     }
     
+}
+
+class SkinType {
+    
+    var skinTypeValueSelection: String
+    var skinTypeImage: UIImage?
+    var skinTypeDetailsSelection: String
+    var skinTypeCheckmark: UIImage?
+    var statusTypeCheckmarkHidden: Bool?
+    
+    init(skinIssueValueSelection: String, skinIssueImage: UIImage?, skinIssueDetailsSelection: String, skinIssueCheckmark: UIImage?) {
+        self.skinTypeValueSelection = skinIssueValueSelection
+        self.skinTypeImage = skinIssueImage
+        self.skinTypeDetailsSelection = skinIssueDetailsSelection
+        self.skinTypeCheckmark = skinIssueCheckmark
+        self.statusTypeCheckmarkHidden = true
+    }
 }
 
 private let reuseIdentifier = "skinIssueDetails"
 
 class SkinIssueDetailsTableViewController: UITableViewController {
     
-    var issues = [Issues]()
+    //untuk Passing Data Balik
+    //var delegate:receiveData?
+    //var data = ""
     
-    let skinType = [
-        Issues(skinIssueValueSelection: "Oily", skinIssueImage: UIImage(named: "oily"), skinIssueDetailsSelection: "A", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
-        Issues(skinIssueValueSelection: "Dry", skinIssueImage: UIImage(named: "dry"), skinIssueDetailsSelection: "B", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
-        Issues(skinIssueValueSelection: "Combination", skinIssueImage: UIImage(named: "combination"), skinIssueDetailsSelection: "C", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
-        Issues(skinIssueValueSelection: "Normal", skinIssueImage: UIImage(named: "normal men"), skinIssueDetailsSelection: "D", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x"))
+    weak var delegate: receiveData? //delegate ini bisa dibilang sebagai pintu untuk akses protocol dsbnya, kalau file lain mau akses, harus ada delegate juga
+    
+    //untuk load table
+    var issues = [Issues]()
+    var types = [SkinType]()
+    var skinCategories = ""
+    
+    var selectedIndex = 0   //biar tau kepilih yang mana indexnya
+    
+    let imageCheckmark = UIImage(named: "QuickActions_Confirmation_2x")
+    
+    let skinTypes = [
+        Issues(skinIssueValueSelection: "Oily", skinIssueImage: UIImage(named: "oily"), skinIssueDetailsSelection: "Oily skin is indicated with excess oil on the face that produces a persistently shiny or greasy appearance. Select this option if you have enlarged pores, blackheads or whiteheads, and frequent pimples or acne problems.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")), //disini buat object untuk jadiin ishidden = true atau false, nanti ini disambungin ke bawah
+        Issues(skinIssueValueSelection: "Dry", skinIssueImage: UIImage(named: "dry"), skinIssueDetailsSelection: "Dry skin is indicated with visible cracking or peeling skin. Excessive dryness can make skin looks rough and scaly. Select this option if your skin pores are almost invisible, your facial skin doesn’t feel elastic, and sometimes redness skin occurs.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
+        Issues(skinIssueValueSelection: "Combination", skinIssueImage: UIImage(named: "combination"), skinIssueDetailsSelection: "Combination skin combines indicator from dry and oily skin. Example of combination skin is you have some visible pores and greasy feel in certain area on your facial skin, but feels dry on the other. Select this option if you experienced the case above.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
+        Issues(skinIssueValueSelection: "Normal", skinIssueImage: UIImage(named: "normal men"), skinIssueDetailsSelection: "Normal skin is the best balance skin type, it is not too oily and not too dry. There are only minor imperfections, no severe sensitivity, and barely visible pores. Select this option if you don’t experienced any major imperfections on your skin.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x"))
     ]
     
+    // di dalem sini masukkin properties flagging. berlaku juga untuk di atas
     let skinIssues = [
-        Issues(skinIssueValueSelection: "Acne Prone", skinIssueImage: UIImage(named: "acne"), skinIssueDetailsSelection: "Satu", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
-        Issues(skinIssueValueSelection: "Dull Skin", skinIssueImage: UIImage(named: "dull"), skinIssueDetailsSelection: "Dua", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
-        Issues(skinIssueValueSelection: "Comedo", skinIssueImage: UIImage(named: "comedo"), skinIssueDetailsSelection: "Tiga", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
-        Issues(skinIssueValueSelection: "Sensitive Skin", skinIssueImage: UIImage(named: "sensitive"), skinIssueDetailsSelection: "Empat", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
-        Issues(skinIssueValueSelection: "Excessive Dryness", skinIssueImage: UIImage(named: "excessive dry"), skinIssueDetailsSelection: "Lima", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x"))
+        Issues(skinIssueValueSelection: "Acne Prone", skinIssueImage: UIImage(named: "acne"), skinIssueDetailsSelection: "Acne is a non-contagious skin condition characterized by pimples caused by inflamed and infected sebaceous glands. Acne typically appears on the face, neck, shoulders, chest and back and ranges in severity.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
+        Issues(skinIssueValueSelection: "Dull Skin", skinIssueImage: UIImage(named: "dull"), skinIssueDetailsSelection: "Dull skin tone is a result of excess dead skin cells that build up on the surface of the skin. Your skin can lose its natural luminosity because of dryness, damaged cells or slow cell turnover, all of which can happen at any age and in any season.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
+        Issues(skinIssueValueSelection: "Comedo", skinIssueImage: UIImage(named: "comedo"), skinIssueDetailsSelection: "A comedo is a clogged hair follicle (pore) in the skin. Keratin (skin debris) combines with oil to block the follicle. A comedo can be open (blackhead) or closed by skin (whitehead) and occur with or without acne.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
+        Issues(skinIssueValueSelection: "Sensitive Skin", skinIssueImage: UIImage(named: "sensitive"), skinIssueDetailsSelection: "Sensitive skin is skin that is easily irritated by different factors, that are generally tolerated by well-balanced skin, such as skin care products or high and low temperatures.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x")),
+        Issues(skinIssueValueSelection: "Excessive Dryness", skinIssueImage: UIImage(named: "excessive dry"), skinIssueDetailsSelection: "Dry skin is an uncomfortable condition marked by scaling, itching, and cracking. It can occur for a variety of reasons.", skinIssueCheckmark: UIImage(named: "QuickActions_Confirmation_2x"))
     ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //MARK: Untuk userdefault
+        let defaults = UserDefaults.standard
+        
+        let skinTypeArray = ["Oily", "Dry", "Combination", "Normal"]
+        defaults.set(skinTypeArray, forKey: "SavedSkinType")
+        
+        let skinIssueArray = ["Acne Prone", "Dull Skin", "Comedo", "Sensitive Skin", "Excessive Dryness"]
+        defaults.set(skinIssueArray, forKey: "SavedSkinIssue")
+        
         //loadSampleIssues() --> dibuka kalau mau ada keluar (display) data
+        
+        // untuk passing data balik
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -64,14 +114,20 @@ class SkinIssueDetailsTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
+    // ini yang dipake juga untuk balik ke preferences page dari skin issues dan type.
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.delegate?.passDataBack(data: issues[selectedIndex])
+    }
+    
     func getSkin(forCategory: String) -> [Issues] {
         switch forCategory {
         case "Skin Type":
-            return skinType
+            return skinTypes
         case "Skin Issue":
             return skinIssues
         default:
-            return skinType
+            return skinTypes
         }
     }
 
@@ -79,6 +135,7 @@ class SkinIssueDetailsTableViewController: UITableViewController {
     
     func initSkin(category: skinCategory) {
         issues = getSkin(forCategory: category.textKiri)
+        skinCategories = category.textKiri
         print(issues)
         self.navigationItem.title = category.textKiri
         categoryFromSkin = category.textKiri
@@ -96,8 +153,9 @@ class SkinIssueDetailsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return issues.count
     }
-
-
+    
+    // (Ko David) didalam cell for row, buat conditional statement untuk nentuin properties flagging hidden true false nya
+    // (Viona) cellForRowAt itu untuk define cellnya, mau ada apa aja di dalam sel tersebut
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "skinIssueDetails", for: indexPath) as? SkinIssueDetailsTableViewCell
@@ -111,8 +169,35 @@ class SkinIssueDetailsTableViewController: UITableViewController {
         cell.skinIssueImage.image = issue.skinIssueImage
         cell.skinIssueDetails.text = issue.skinIssueDetailsSelection
         cell.skinIssueCheckmark.image = issue.skinIssueCheckmark
-
+        
+        // untuk umpetin gambar sudah siap. ini pakai statuscheckmark hidden mksdnya dia true hidden gitu
+        cell.skinIssueCheckmark.isHidden = issue.statusCheckmarkHidden!
+        
         return cell
+    }
+    
+    
+    //nanti pas di klik, kalau mau centangnya hilang, object isHiddennya dipanggil disini. Tapi manggilnya, harus membuat object isHiddennya berubah, jadi biar bisa kepanggil checkmarknya. (yang ada array di atas (skinTypes dan skinIssues))
+    
+    // didSelectRowAt itu untuk menentukan behavior dari cell
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedIndex = indexPath.row
+        
+        let issue = issues[indexPath.row]
+        
+        issue.statusCheckmarkHidden = !(issue.statusCheckmarkHidden ?? true) // tanda ! didepan kurung itu untuk inverse bool value, dan ?? true maksudnya kalau ternyata ada kemungkinan nilai nil, dibalikkin ke defaultnya adalah true. (kalau true artinya hidden)
+        if skinCategories == "Skin Type" {
+            issue.isIssue = false
+        } else if skinCategories == "Skin Issue" {
+            issue.isIssue = true
+        }
+        
+        
+        tableView.reloadData()
+        
+       // self.navigationController?.popViewController(animated: true)
+        
+        
     }
     
 
@@ -161,6 +246,7 @@ class SkinIssueDetailsTableViewController: UITableViewController {
     }
     */
 
+  /*
     private func loadSampleIssues() {
         let imageIssueSatu = UIImage(named: "acne")
         let imageIssueDua = UIImage(named: "dull")
@@ -181,5 +267,15 @@ class SkinIssueDetailsTableViewController: UITableViewController {
 
         issues += [issueSatu, issueDua, issueTiga, issueEmpat, issueLima]
     }
+    */
     
 }
+
+// kata kak zein yang dibawah ini ga perlu. Unwindnya kak zein pake di didSelectRow yang method navigation controller, yang ada pop view pop view itu.
+extension PreferencesViewController {
+    @IBAction func unwindWithSelectedSkinValue(segue: UIStoryboardSegue) {
+        
+    }
+}
+
+// PlayerDetailsViewController dari raywenderleich = PreferencesViewController disini

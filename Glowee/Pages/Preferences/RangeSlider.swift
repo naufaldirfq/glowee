@@ -57,7 +57,7 @@ class RangeSlider: UIControl {
       }
     }
 
-    var thumbImage = #imageLiteral(resourceName: "Oval") {
+    var thumbImage = #imageLiteral(resourceName: "thumbslider36px.png") {
       didSet {
         upperThumbImageView.image = thumbImage
         lowerThumbImageView.image = thumbImage
@@ -65,7 +65,7 @@ class RangeSlider: UIControl {
       }
     }
 
-    var highlightedThumbImage = #imageLiteral(resourceName: "HighlightedOval") {
+    var highlightedThumbImage = #imageLiteral(resourceName: "thumbslider36px.png") {
       didSet {
         upperThumbImageView.highlightedImage = highlightedThumbImage
         lowerThumbImageView.highlightedImage = highlightedThumbImage
