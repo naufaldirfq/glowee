@@ -18,7 +18,9 @@ class skinCategory {
     
 }
 
-class PreferencesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PreferencesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, receiveData {
+    
+    // ini untuk bagian passing data segue --> passing datanya pake popview navigation di file SkinIssueDetailsTableViewController
     
     // ini coba ngetes tentang double headed slider
     
@@ -48,8 +50,29 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var submitButton: UIButton!
     
+    var chosenSkinType:String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // MARK: USER-DEFAULTS
+        //let defaults = UserDefaults.standard
+        
+        //let skinTypeArray = ["Oily", "Dry", "Combination", "Normal"]
+        //defaults.set(skinTypeArray, forKey: "SavedSkinType")
+        
+//        let skinIssueArray = ["Acne Prone", "Dull Skin", "Comedo", "Sensitive Skin", "Excessive Dryness"]
+//        defaults.set(skinIssueArray, forKey: "SavedSkinIssue")
+        
+        //MARK: Retrieve User-Defaults
+        
+   //     let savedSkinType = defaults.object(forKey: "SavedSkinType") as? [String] ?? [String]()
+        
+   //     let savedSkinIssue = defaults.object(forKey: "SavedSkinIssue") as? [String] ?? [String]()
+        
+        
+        
+        //let skinIssueUserDef = savedSkinIssue[indexPath.row]
         
         // bagian double headed slider
         rangeSlider.addTarget(self, action: #selector(rangeSliderValueChanged(_:)),
@@ -77,7 +100,7 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "skinTypeCell", for: indexPath) as? skinTypeTableViewCell
         
         cell?.skinType.text = listCategory[indexPath.row].textKiri
-        cell?.skinIssue.text = listCategory[indexPath.row].textKanan
+        cell?.skinDetails.text = listCategory[indexPath.row].textKanan
         
         return cell!
     }
@@ -89,11 +112,26 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let nextView = segue.destination as? SkinIssueDetailsTableViewController
-        
-        nextView?.initSkin(category: (sender as? skinCategory)!)
-        
+        if segue.identifier == "skinIssueDetails",
+           let nextView = segue.destination as? SkinIssueDetailsTableViewController {
+            nextView.delegate = self  // ini delegate untuk akses protokol
+                        
+            nextView.initSkin(category: (sender as? skinCategory)!)
+        }
     }
+    
+    func passDataBack(data: Issues) {
+        if data.isIssue ?? true {
+            listCategory[1].textKanan = data.skinIssueValueSelection
+        } else {
+            listCategory[0].textKanan = data.skinIssueValueSelection
+        }
+        
+//        listCategory[0].textKanan = data
+//        listCategory[1].textKanan = data
+        
+        skinTypeAndIssueTable.reloadData()
+    } //reload tableviewnya disini, terus juga panggil protocol pass data back disini
     
     
     //dibawah ini untuk double headed slider duniawi
@@ -107,15 +145,16 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
     }
 
     @objc func rangeSliderValueChanged(_ rangeSlider: RangeSlider) {
-      let minValues = "\(rangeSlider.lowerValue * 1_000_000)"
-      let maxValues = "\(rangeSlider.upperValue * 1_000_000)" // kalo pake kayak gini, takutnya terlalu kecil valuenya dan susah approval logicnya
+      let minValues = rangeSlider.lowerValue * 1_000_000
+      let maxValues = rangeSlider.upperValue * 1_000_000 // kalo pake kayak gini, takutnya terlalu kecil valuenya dan susah approval logicnya
       print("Range slider value changed: \(minValues), \(maxValues)")
       
-        let fixMinValue = String(format: "%.2f", minValues)
-        
-      minBudgetLabel.text = "Min: Rp \(fixMinValue)"
+       let fixMinValue = String(format: "%.f", minValues)
+       let fixMaxValue = String(format: "%.f", maxValues)
+      //minBudgetLabel.text = "Min: Rp \(fixMinValue)"
     
-      maxBudgetLabel.text = "Max: Rp \(maxValues)"
+        minBudgetLabel.text = "Min: Rp \(fixMinValue)"
+        maxBudgetLabel.text = "Max: Rp \(fixMaxValue)"
         
         //minBudgetLabel.text = "\(String(format: "%.2f", minValues))"
     }
