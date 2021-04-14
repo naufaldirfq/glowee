@@ -54,26 +54,7 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // MARK: USER-DEFAULTS
-        //let defaults = UserDefaults.standard
-        
-        //let skinTypeArray = ["Oily", "Dry", "Combination", "Normal"]
-        //defaults.set(skinTypeArray, forKey: "SavedSkinType")
-        
-//        let skinIssueArray = ["Acne Prone", "Dull Skin", "Comedo", "Sensitive Skin", "Excessive Dryness"]
-//        defaults.set(skinIssueArray, forKey: "SavedSkinIssue")
-        
-        //MARK: Retrieve User-Defaults
-        
-   //     let savedSkinType = defaults.object(forKey: "SavedSkinType") as? [String] ?? [String]()
-        
-   //     let savedSkinIssue = defaults.object(forKey: "SavedSkinIssue") as? [String] ?? [String]()
-        
-        
-        
-        //let skinIssueUserDef = savedSkinIssue[indexPath.row]
-        
+        hideKeyboardWhenTappedAround()
         // bagian double headed slider
         rangeSlider.addTarget(self, action: #selector(rangeSliderValueChanged(_:)),
                               for: .valueChanged)
@@ -89,6 +70,16 @@ class PreferencesViewController: UIViewController, UITableViewDelegate, UITableV
         //bagian double headed slider
         view.addSubview(rangeSlider)
     }
+    
+    func hideKeyboardWhenTappedAround() {
+            let tapGesture = UITapGestureRecognizer(target: self,
+                             action: #selector(hideKeyboard))
+            view.addGestureRecognizer(tapGesture)
+        }
+
+        @objc func hideKeyboard() {
+            view.endEditing(true)
+        }
     
     //dibawah ini untuk pertabelan duniawi
     

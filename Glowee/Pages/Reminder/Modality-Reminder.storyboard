@@ -45,6 +45,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="doneButton" destination="gDc-D2-mxg" id="sa9-3i-BTf"/>
                         <outlet property="reminderTableView" destination="k8o-Ac-fyM" id="d4m-1O-tqo"/>
                     </connections>
                 </viewController>

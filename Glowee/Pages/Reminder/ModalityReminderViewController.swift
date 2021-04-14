@@ -10,6 +10,7 @@ import UIKit
 class ModalityReminderViewController: UIViewController {
 
     @IBOutlet weak var reminderTableView: UITableView!
+    @IBOutlet weak var doneButton: UIBarButtonItem!
     
     let names = [
         "Every Morning (07.00 AM)",
@@ -22,16 +23,19 @@ class ModalityReminderViewController: UIViewController {
         
         reminderTableView.delegate = self
         reminderTableView.dataSource = self
-
+        doneButton.action = #selector(backToPreviousPage)
         
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func backToPreviousPage() {
+        self.dismiss(animated: true, completion: nil)
     }
      
 }
 
 extension ModalityReminderViewController:  UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("you tapped me")
     }
 }
 
