@@ -146,6 +146,9 @@
                                                     <rect key="frame" x="332" y="36" width="38" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Why?"/>
+                                                    <connections>
+                                                        <segue destination="ENI-OS-aSX" kind="show" id="lzY-5b-Uvl"/>
+                                                    </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Recommendation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqn-Hi-OWs">
                                                     <rect key="frame" x="20" y="4" width="262" height="29"/>
@@ -175,6 +178,7 @@
                                         <connections>
                                             <outlet property="productCollectionView" destination="24q-S9-kWz" id="CMp-hd-gN9"/>
                                             <outlet property="recommendationLabel" destination="FG7-Pe-Go2" id="GAi-by-bcw"/>
+                                            <outlet property="whyButton" destination="hC4-V6-EeM" id="pVO-2w-tXN"/>
                                             <outlet property="yourRecommendationLabel" destination="zqn-Hi-OWs" id="ggB-VY-I6b"/>
                                         </connections>
                                     </tableViewCell>
@@ -212,7 +216,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l9l-Jf-AGb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1934" y="-28"/>
+            <point key="canvasLocation" x="-2028" y="101"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zAW-vE-4ke">
@@ -279,6 +283,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcc-93-ybv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2653.8461538461538" y="-630.56872037914684"/>
+        </scene>
+        <!--WhyPageRevisi-->
+        <scene sceneID="I5R-m3-9NY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WhyPageRevisi" id="ENI-OS-aSX" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="XbT-YW-5tx"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="57q-2N-hmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2035" y="-84"/>
         </scene>
     </scenes>
     <resources>

@@ -13,6 +13,7 @@ class RecommendationTableViewCell: UITableViewCell, UICollectionViewDelegate, UI
     @IBOutlet weak var productCollectionView: UICollectionView!
     @IBOutlet weak var recommendationLabel: UILabel!
     @IBOutlet weak var yourRecommendationLabel: UILabel!
+    @IBOutlet weak var whyButton: UIButton!
     
     var models = [Model]()
     

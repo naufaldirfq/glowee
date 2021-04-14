@@ -60,6 +60,7 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
             }
             cell?.configure(with: productModel)
             cell?.recommendationLabel.text = recommendations[indexPath.row]
+            cell?.whyButton
             return cell!
         }
         
