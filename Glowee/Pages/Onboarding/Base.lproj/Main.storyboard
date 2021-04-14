@@ -20,13 +20,14 @@
                                 <rect key="frame" x="-5" y="-27" width="426" height="948"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GloweeLogowhite" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-zg-eOK">
-                                <rect key="frame" x="107" y="214" width="200" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GloweeLogowhite" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-zg-eOK">
+                                <rect key="frame" x="0.0" y="214" width="390" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="KT6-OV-iXS"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-bM-ddG">
-                                <rect key="frame" x="88" y="440" width="240" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-bM-ddG">
+                                <rect key="frame" x="0.0" y="440" width="390" height="61"/>
                                 <string key="text">GLOWEE helps you giving
 skincare recommendations that
 already registered in BPOM</string>
@@ -34,13 +35,23 @@ already registered in BPOM</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Fr-wR-hRd">
-                                <rect key="frame" x="147" y="560" width="123" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Fr-wR-hRd">
+                                <rect key="frame" x="0.0" y="560" width="390" height="28"/>
                             </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Fr-wR-hRd" secondAttribute="trailing" id="GXM-Aj-oiQ"/>
+                            <constraint firstItem="3Fr-wR-hRd" firstAttribute="top" secondItem="sRb-bM-ddG" secondAttribute="bottom" constant="59" id="PQm-TO-jKn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3CK-zg-eOK" secondAttribute="trailing" id="Reb-d7-vtS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sRb-bM-ddG" secondAttribute="trailing" id="maP-Ag-ajA"/>
+                            <constraint firstItem="3Fr-wR-hRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nJ6-qe-28G"/>
+                            <constraint firstItem="sRb-bM-ddG" firstAttribute="top" secondItem="3CK-zg-eOK" secondAttribute="bottom" constant="26" id="pnM-JL-iPb"/>
+                            <constraint firstItem="sRb-bM-ddG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="prb-Zs-3ew"/>
+                            <constraint firstItem="3CK-zg-eOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="str-3q-kAZ"/>
+                            <constraint firstItem="3CK-zg-eOK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="yhS-ab-pBG"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lpk-fj-j0S"/>
                     <connections>
@@ -65,17 +76,11 @@ already registered in BPOM</string>
                                 <rect key="frame" x="-28" y="-26" width="447" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gloweeLogohorizontal" translatesAutoresizingMaskIntoConstraints="NO" id="hQ7-aj-hRz">
-                                <rect key="frame" x="84" y="44" width="240" height="84"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skincareprod2.1" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-HW-pmB">
+                                <rect key="frame" x="0.0" y="244.00000000000003" width="390" height="124.33333333333334"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skincareprod2.1" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-HW-pmB">
-                                <rect key="frame" x="77" y="199" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVG-IM-H6c">
-                                <rect key="frame" x="96" y="447" width="207" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVG-IM-H6c">
+                                <rect key="frame" x="0.0" y="447" width="390" height="61"/>
                                 <string key="text">To recommend the suitable
 product, we need
 to know your skin better</string>
@@ -83,12 +88,11 @@ to know your skin better</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="6co-rh-I9G">
-                                <rect key="frame" x="138" y="561" width="123" height="28"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="6co-rh-I9G">
+                                <rect key="frame" x="0.0" y="561" width="390" height="28"/>
                             </pageControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA0-aq-HBe">
-                                <rect key="frame" x="117" y="715" width="175" height="30"/>
+                                <rect key="frame" x="108" y="664" width="175" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Lets Begin"/>
@@ -99,6 +103,17 @@ to know your skin better</string>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7Sc-hm-AuV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EVG-IM-H6c" firstAttribute="leading" secondItem="7Sc-hm-AuV" secondAttribute="leading" id="AX7-MC-mhT"/>
+                            <constraint firstItem="7Sc-hm-AuV" firstAttribute="trailing" secondItem="6co-rh-I9G" secondAttribute="trailing" id="FKg-GQ-VSs"/>
+                            <constraint firstItem="6co-rh-I9G" firstAttribute="top" secondItem="EVG-IM-H6c" secondAttribute="bottom" constant="53" id="P52-Vr-KSx"/>
+                            <constraint firstItem="7Sc-hm-AuV" firstAttribute="trailing" secondItem="7D2-HW-pmB" secondAttribute="trailing" id="QCC-bq-vA4"/>
+                            <constraint firstItem="7D2-HW-pmB" firstAttribute="top" secondItem="7Sc-hm-AuV" secondAttribute="top" constant="200" id="VTv-JV-2sw"/>
+                            <constraint firstItem="7D2-HW-pmB" firstAttribute="leading" secondItem="7Sc-hm-AuV" secondAttribute="leading" id="Y8R-Ku-v1k"/>
+                            <constraint firstItem="6co-rh-I9G" firstAttribute="leading" secondItem="7Sc-hm-AuV" secondAttribute="leading" id="icd-Qd-ByO"/>
+                            <constraint firstItem="7Sc-hm-AuV" firstAttribute="trailing" secondItem="EVG-IM-H6c" secondAttribute="trailing" id="of1-Ad-DnV"/>
+                            <constraint firstItem="EVG-IM-H6c" firstAttribute="top" secondItem="7D2-HW-pmB" secondAttribute="bottom" constant="78.670000000000002" id="pdo-l0-fgT"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1gH-Z3-S3g"/>
                     <connections>
@@ -145,7 +160,6 @@ to know your skin better</string>
     <resources>
         <image name="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" width="261.33334350585938" height="562"/>
         <image name="GloweeLogowhite" width="296" height="298.33334350585938"/>
-        <image name="gloweeLogohorizontal" width="747.66668701171875" height="234.66667175292969"/>
         <image name="skincareprod2.1" width="149.33332824707031" height="124.33333587646484"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -187,11 +187,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gearshape.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="XnF-Oo-bb7">
-                                <rect key="frame" x="349" y="44.333333333333371" width="25" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9xB-FL-Xkq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -202,7 +197,14 @@
                             <constraint firstItem="4y6-U3-cip" firstAttribute="bottom" secondItem="9xB-FL-Xkq" secondAttribute="bottom" id="wke-eq-MLA"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Suggestions" id="G7e-ZK-Ns3"/>
+                    <navigationItem key="navigationItem" title="Suggestions" id="G7e-ZK-Ns3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="gearshape.fill" catalog="system" style="plain" id="Ylk-5X-bDu">
+                            <color key="tintColor" systemColor="labelColor"/>
+                            <connections>
+                                <segue destination="mja-ZE-pJ3" kind="show" id="Zil-fj-njF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="suggestionTableView" destination="4y6-U3-cip" id="Wep-jF-uLN"/>
                     </connections>
@@ -277,10 +279,10 @@
             </objects>
             <point key="canvasLocation" x="-3583.0769230769229" y="-630.56872037914684"/>
         </scene>
-        <!--Reminder-->
+        <!--Reminder-Final-->
         <scene sceneID="bCj-b6-XyS">
             <objects>
-                <viewControllerPlaceholder storyboardName="Reminder" id="ABd-O5-MKB" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Reminder-Final" id="ABd-O5-MKB" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ZCl-de-53Y"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xcc-93-ybv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -306,6 +308,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="57q-2N-hmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2022" y="15"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="9Gd-Xs-IV7">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Preferences" id="mja-ZE-pJ3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zaS-ex-iH2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7o-HE-MeP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2060" y="-132"/>
         </scene>
     </scenes>
     <resources>

@@ -20,7 +20,7 @@ class WhyPageViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     var questionIndex = [
-        "What is it? (Rencana mau dibuat kayak ingredients)",
+        "What is it?",
         "Effects when I use unsuitable cleanser?",
         "Cleanser Types:",
         "Recommended Usages:"
@@ -45,7 +45,7 @@ class WhyPageViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     func tableView(_ tableView:UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 240
+        return 200
         
     }
     

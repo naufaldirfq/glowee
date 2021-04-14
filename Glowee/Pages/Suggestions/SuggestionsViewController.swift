@@ -11,13 +11,17 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var suggestionTableView: UITableView!
     let recommendations = ["", "Cleanser", "Sunscreen", "Moisturizer"]
-    var productModel = [Model]()
+    var cleanserModel = [Model]()
+    var moisturizerModel = [Model]()
+    var sunscreenModel = [Model]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initView()
-        initModels()
+        initMoisturizerModels()
+        initSunscreenModels()
+        initCleanserModels()
         // Do any additional setup after loading the view.
     }
     
@@ -27,13 +31,28 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
 
     }
     
-    func initModels() {
-        productModel.append(Model(productName: "Garnier", image: "cleanser_1"))
-        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2"))
-        productModel.append(Model(productName: "Senka", image: "cleanser_3"))
-        productModel.append(Model(productName: "Garnier", image: "cleanser_1"))
-        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2"))
-        productModel.append(Model(productName: "Senka", image: "cleanser_3"))
+    func initCleanserModels() {
+        cleanserModel.append(Model(productName: "Clean&Clear", image: "cleanser_2", brandName: " "))
+        cleanserModel.append(Model(productName: "Senka", image: "cleanser_3", brandName: " "))
+        cleanserModel.append(Model(productName: "Garnier", image: "cleanser_1", brandName: " "))
+        cleanserModel.append(Model(productName: "Innisfree", image: "cleanser_innisfree", brandName: " "))
+        cleanserModel.append(Model(productName: "Cetaphil", image: "cleanser_cetaphil", brandName: " "))
+    }
+    
+    func initMoisturizerModels() {
+        moisturizerModel.append(Model(productName: "Laneige", image: "moist_laneige", brandName: " "))
+        moisturizerModel.append(Model(productName: "Cerave", image: "moist_cerave", brandName: " "))
+        moisturizerModel.append(Model(productName: "Hada Labo", image: "moist_hadalabo", brandName: " "))
+        moisturizerModel.append(Model(productName: "Safi", image: "moist_safi", brandName: " "))
+    }
+    
+    func initSunscreenModels() {
+        sunscreenModel.append(Model(productName: "Cosrx", image: "CosrxAloeSoothingSunScreen", brandName: " "))
+        sunscreenModel.append(Model(productName: "Rose All Day", image: "sunscreen_roseallday", brandName: " "))
+        sunscreenModel.append(Model(productName: "Emina", image: "sunscreen_emina", brandName: " "))
+        sunscreenModel.append(Model(productName: "Lacoco", image: "sunscreen_lacoco", brandName: " "))
+        sunscreenModel.append(Model(productName: "Wardah", image: "sunscreen_wardah", brandName: " "))
+        sunscreenModel.append(Model(productName: "Klairs", image: "sunscreen_klairs", brandName: " "))
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,9 +77,15 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
             if indexPath.row != 1 {
                 cell?.yourRecommendationLabel.isHidden = true
             }
-            cell?.configure(with: productModel)
+            if indexPath.row == 1 {
+                cell?.configure(with: cleanserModel)
+            } else if indexPath.row == 2 {
+                cell?.configure(with: sunscreenModel)
+            } else if indexPath.row == 3 {
+                cell?.configure(with: moisturizerModel)
+            }
+            
             cell?.recommendationLabel.text = recommendations[indexPath.row]
-            cell?.whyButton
             return cell!
         }
         

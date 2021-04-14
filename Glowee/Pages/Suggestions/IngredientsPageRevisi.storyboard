@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Ingridients-->
+        <!--Benzoyl Peroxide-->
         <scene sceneID="D8f-8y-sth">
             <objects>
-                <viewController title="Ingridients" id="Rjo-fn-JMv" customClass="IngredientsPageRevisi" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Benzoyl Peroxide" id="Rjo-fn-JMv" customClass="IngredientsPageRevisi" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qBX-gV-Aqg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
