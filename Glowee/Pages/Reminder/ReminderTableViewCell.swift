@@ -8,35 +8,16 @@
 import UIKit
 
 class ReminderTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDataSource{
-    let brandName = [
-        "COSRX",
-        "Nivea",
-        "Biore"
-    ]
-    
-    let productName = [
-        "Product 1",
-        "Product 2",
-        "Product 3"
-    ]
-    
-//    let imageName:[UII] = [
-//        "Product 1",
-//        "Product 2",
-//        "Product 3",
-//    ]
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ReminderTableViewCell2
         
-        
-//        cell?.imageString.text = imageName[indexPath.row]
-//        cell?.brandNameLabel.text = brandName[indexPath.row]
-//        cell?.ProductNameLabel.text = productName[indexPath.row]
         cell?.configure(with: models[indexPath.row])
+        tableView.separatorStyle = .none
         return cell!
     }
     
@@ -46,9 +27,6 @@ class ReminderTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDa
         self.models = models
         tableViewProduct.reloadData()
     }
-    
-    
-    
     
     
     @IBOutlet weak var tableViewProduct: UITableView!
@@ -69,7 +47,7 @@ class ReminderTableViewCell: UITableViewCell, UITableViewDelegate, UITableViewDa
     }
 
     func tableView(_ tableView:UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 90
+        return 100
         
     }
 }

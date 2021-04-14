@@ -22,12 +22,7 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
     var productModel = [Model]()
     
     func initModels() {
-        productModel.append(Model(productName: "Garnier", image: "cleanser_1", brandName: "Brand Name"))
-        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2", brandName: "Brand Name "))
-        productModel.append(Model(productName: "Senka", image: "cleanser_3", brandName: " "))
-        productModel.append(Model(productName: "Garnier", image: "cleanser_1", brandName: " "))
-        productModel.append(Model(productName: "Clean&Clear", image: "cleanser_2", brandName: " "))
-        productModel.append(Model(productName: "Senka", image: "cleanser_3", brandName: " "))
+        productModel.append(Model(productName: "Cosrx Aloe Soothing Sun Cream SPF 50+ PA+++", image: "CosrxAloeSoothingSunScreen", brandName: "Cosrx"))
     }
     
     
@@ -49,15 +44,6 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell =  tableView.dequeueReusableCell(withIdentifier: "ReminderTableViewCell", for: indexPath) as? ReminderTableViewCell
         cell?.timeRoutineLabel.text = timeRoutineIndex[indexPath.row]
-        //        if indexPath.row == 0 {
-//            cell?.timeRoutineLabel = "Morning"
-//        }
-//        else if indexPath.row == 1{
-//            cell?.timeRoutineLabel = "Afternoon"
-//        }
-//        else if indexPath.row == 2{
-//            cell?.timeRoutineLabel = "Evening"
-//        }
         cell?.timeLabel.text = actualTime[indexPath.row]
         
         cell?.configure(with: productModel)
@@ -65,13 +51,9 @@ class ReminderViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView:UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 260
+        return 180
         
     }
-    
-//    func tableView (_ tableView:UITableView, layout CollectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-//        return CGSize(width: <#T##CGFloat#>, height: <#T##CGFloat#>)
-//    }
 
     
 }

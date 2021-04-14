@@ -52,7 +52,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="remindbutton"/>
                                                     <connections>
-                                                        <segue destination="hBV-I6-Zfx" kind="presentation" id="EOe-oc-w56"/>
+                                                        <segue destination="hBV-I6-Zfx" kind="presentation" identifier="productDetailViewController" id="EOe-oc-w56"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJz-gE-dgt">

@@ -77,12 +77,16 @@ class SuggestionsViewController: UIViewController, UITableViewDelegate, UITableV
             if indexPath.row != 1 {
                 cell?.yourRecommendationLabel.isHidden = true
             }
+            
             if indexPath.row == 1 {
                 cell?.configure(with: cleanserModel)
+                tableView.separatorStyle = .none
             } else if indexPath.row == 2 {
                 cell?.configure(with: sunscreenModel)
+                tableView.separatorStyle = .none
             } else if indexPath.row == 3 {
                 cell?.configure(with: moisturizerModel)
+                tableView.separatorStyle = .none
             }
             
             cell?.recommendationLabel.text = recommendations[indexPath.row]
