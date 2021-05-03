@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="OnboardingViewController" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" translatesAutoresizingMaskIntoConstraints="NO" id="7n4-m1-CI6">
+                                <rect key="frame" x="-5" y="-27" width="426" height="948"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GloweeLogowhite" translatesAutoresizingMaskIntoConstraints="NO" id="3CK-zg-eOK">
+                                <rect key="frame" x="0.0" y="214" width="390" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="KT6-OV-iXS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-bM-ddG">
+                                <rect key="frame" x="0.0" y="440" width="390" height="61"/>
+                                <string key="text">GLOWEE helps you giving
+skincare recommendations that
+already registered in BPOM</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="3Fr-wR-hRd">
+                                <rect key="frame" x="0.0" y="560" width="390" height="28"/>
+                            </pageControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Fr-wR-hRd" secondAttribute="trailing" id="GXM-Aj-oiQ"/>
+                            <constraint firstItem="3Fr-wR-hRd" firstAttribute="top" secondItem="sRb-bM-ddG" secondAttribute="bottom" constant="59" id="PQm-TO-jKn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3CK-zg-eOK" secondAttribute="trailing" id="Reb-d7-vtS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sRb-bM-ddG" secondAttribute="trailing" id="maP-Ag-ajA"/>
+                            <constraint firstItem="3Fr-wR-hRd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nJ6-qe-28G"/>
+                            <constraint firstItem="sRb-bM-ddG" firstAttribute="top" secondItem="3CK-zg-eOK" secondAttribute="bottom" constant="26" id="pnM-JL-iPb"/>
+                            <constraint firstItem="sRb-bM-ddG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="prb-Zs-3ew"/>
+                            <constraint firstItem="3CK-zg-eOK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="str-3q-kAZ"/>
+                            <constraint firstItem="3CK-zg-eOK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="yhS-ab-pBG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lpk-fj-j0S"/>
+                    <connections>
+                        <outlet property="swipeScreen" destination="8bC-Xf-vdC" id="tLw-AK-kxf"/>
+                        <segue destination="cXf-n0-8xW" kind="showDetail" identifier="OnBoarding2" id="pzn-Jh-7y3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Vgw-OQ-yNS"/>
+            </objects>
+            <point key="canvasLocation" x="-72.463768115942031" y="68.973214285714278"/>
+        </scene>
+        <!--On Boarding2 View Controller-->
+        <scene sceneID="hMJ-eq-gMe">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="cXf-n0-8xW" customClass="OnBoarding2ViewController" customModule="Glowee" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4DT-4l-tl2">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" translatesAutoresizingMaskIntoConstraints="NO" id="rBm-cj-Fer">
+                                <rect key="frame" x="-28" y="-26" width="447" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="skincareprod2.1" translatesAutoresizingMaskIntoConstraints="NO" id="7D2-HW-pmB">
+                                <rect key="frame" x="0.0" y="244.00000000000003" width="390" height="124.33333333333334"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EVG-IM-H6c">
+                                <rect key="frame" x="0.0" y="447" width="390" height="61"/>
+                                <string key="text">To recommend the suitable
+product, we need
+to know your skin better</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" currentPage="1" translatesAutoresizingMaskIntoConstraints="NO" id="6co-rh-I9G">
+                                <rect key="frame" x="0.0" y="561" width="390" height="28"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lA0-aq-HBe">
+                                <rect key="frame" x="108" y="664" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Lets Begin"/>
+                                <connections>
+                                    <segue destination="HuU-NC-jV5" kind="show" id="eXG-aq-opA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7Sc-hm-AuV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="EVG-IM-H6c" firstAttribute="leading" secondItem="7Sc-hm-AuV" secondAttribute="leading" id="AX7-MC-mhT"/>
+                            <constraint firstItem="7Sc-hm-AuV" firstAttribute="trailing" secondItem="6co-rh-I9G" secondAttribute="trailing" id="FKg-GQ-VSs"/>
+                            <constraint firstItem="6co-rh-I9G" firstAttribute="top" secondItem="EVG-IM-H6c" secondAttribute="bottom" constant="53" id="P52-Vr-KSx"/>
+                            <constraint firstItem="7Sc-hm-AuV" firstAttribute="trailing" secondItem="7D2-HW-pmB" secondAttribute="trailing" id="QCC-bq-vA4"/>
+                            <constraint firstItem="7D2-HW-pmB" firstAttribute="top" secondItem="7Sc-hm-AuV" secondAttribute="top" constant="200" id="VTv-JV-2sw"/>
+                            <constraint firstItem="7D2-HW-pmB" firstAttribute="leading" secondItem="7Sc-hm-AuV" secondAttribute="leading" id="Y8R-Ku-v1k"/>
+                            <constraint firstItem="6co-rh-I9G" firstAttribute="leading" secondItem="7Sc-hm-AuV" secondAttribute="leading" id="icd-Qd-ByO"/>
+                            <constraint firstItem="7Sc-hm-AuV" firstAttribute="trailing" secondItem="EVG-IM-H6c" secondAttribute="trailing" id="of1-Ad-DnV"/>
+                            <constraint firstItem="EVG-IM-H6c" firstAttribute="top" secondItem="7D2-HW-pmB" secondAttribute="bottom" constant="78.670000000000002" id="pdo-l0-fgT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1gH-Z3-S3g"/>
+                    <connections>
+                        <outlet property="btnLetsBegin" destination="lA0-aq-HBe" id="Aei-es-kEo"/>
+                        <outlet property="swipeScreen" destination="4DT-4l-tl2" id="13l-x6-KKa"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="OnBoarding1" id="YJ9-Fi-awj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVf-VV-iDZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789.85507246376812" y="68.973214285714278"/>
+        </scene>
+        <!--Suggestions-->
+        <scene sceneID="TZU-zB-Pyd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Suggestions" id="dyG-S0-yen" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Oht-Xe-SIb"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3y1-3F-eux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="442" y="69"/>
+        </scene>
+        <!--Reminder-->
+        <scene sceneID="su8-cQ-OQ4">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Reminder" id="iuD-sc-m6f" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="FhK-8L-Feg"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bJa-1N-ZoG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="438" y="190"/>
+        </scene>
+        <!--Preferences-->
+        <scene sceneID="cwm-iG-DjV">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Preferences" id="HuU-NC-jV5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UKi-W0-lyq"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5e-4L-vWr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1473" y="292"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="585BAC44-874E-4CC4-AEB1-12451E1ADBDF" width="261.33334350585938" height="562"/>
+        <image name="GloweeLogowhite" width="296" height="298.33334350585938"/>
+        <image name="skincareprod2.1" width="149.33332824707031" height="124.33333587646484"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
